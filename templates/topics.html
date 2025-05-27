@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose a Story Topic</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="options-container">
+      <h1>🎉ርዕሶች🎉</h1>
+      <p class="sub">ታሪኩን ለመገመት ርዕስ ይምረጡ::</p>
+
+      <div class="buttons">
+        {% for topic in topics %}
+        <a href="{{ topic.url }}" class="option-btn">{{ topic.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

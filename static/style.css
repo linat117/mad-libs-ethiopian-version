@@ -1,0 +1,128 @@
+/* Reset browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background */
+body {
+  background: linear-gradient(135deg, #faf4f9, #eef4ff);
+  font-family: "Poppins", "Comic Sans MS", sans-serif;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Containers */
+.container,
+.options-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.4rem;
+  color: #4b2e83; /* Deep plum */
+  margin-bottom: 20px;
+}
+
+.subtitle,
+.sub {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.start-button,
+.option-btn,
+button.option-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  font-size: 1rem;
+  color: #ffffff; /* Ensures button text is white */
+  background-color: #c6b1ef; /* Deep violet */
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(75, 46, 131, 0.2);
+  cursor: pointer;
+}
+
+.start-button:hover,
+.option-btn:hover,
+button.option-btn:hover {
+  background-color: #6141aa;
+  transform: translateY(-2px);
+  color: #ffffff; /* Keeps the hover text white too */
+}
+
+/* Text inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+  background: #fafafa;
+  color: #333;
+}
+
+input[type="text"]:focus {
+  border-color: #6141aa;
+  outline: none;
+}
+
+/* Story-specific styles */
+body.story-page {
+  background: linear-gradient(135deg, #f7f8fc, #fefeff);
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+body.story-page h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+body.story-page p,
+body.story-page label {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+body.story-page p.story-text {
+  background: #f2f2f7;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: inset 0 0 6px rgba(75, 46, 131, 0.05);
+  margin-top: 1rem;
+}
+
+/* Back link button */
+a.option-btn {
+  margin-top: 1.5rem;
+  color: #4b2e83;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a.option-btn:hover {
+  text-decoration: underline;
+}
