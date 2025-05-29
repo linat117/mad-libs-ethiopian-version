@@ -11,43 +11,42 @@
   <body class="story-page">
     <div class="options-container">
       <h1>{{ title }}</h1>
-      <p>Welcome to the market adventure Mad Libs! 🛒</p>
       {% if story %}
-      <h2>Your Mad Libs Story:</h2>
+     
       <p>{{ story }}</p>
-      <a href="/story/school" class="option-btn">Try Again</a>
+
       {% else %}
       <form method="POST">
-        <label>Adjective:</label><br />
+        <label>የስራ_ዘርፍ</label><br />
         <input
           type="text"
-          name="adjective"
-          value="{{ adjective }}"
+          name="የስራ_ዘርፍ"
+          value="{{ የስራ_ዘርፍ }}"
           required
         /><br /><br />
 
-        <label>Noun:</label><br />
+        <label>ቀለም</label><br />
         <input
           type="text"
-          name="noun"
-          value="{{ noun }}"
+          name="ቀለምም"
+          value="{{ ቀለምም }}"
           required
         /><br /><br />
 
-        <label>Verb (past tense):</label><br />
+        <label>ተቋም</label><br />
         <input
           type="text"
-          name="verb"
-          value="{{ verb }}"
+          name="ተቋምም"
+          value="{{ ተቋምም }}"
           required
         /><br /><br />
 
-        <button type="submit" class="option-btn">Generate Story</button>
+        <button type="submit" class="option-btn">ታሪኩን ይመልከቱ</button>
       </form>
       {% endif %}
 
       <br />
-      <a href="/topics" class="option-btn">← Back to Topics</a>
+      <a href="/topics" class="option-btn">← ወደ ርዕሶች ይመለሱ</a>
     </div>
   </body>
 </html>

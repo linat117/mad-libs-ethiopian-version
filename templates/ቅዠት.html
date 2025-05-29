@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="story-page">
+    <div class="options-container">
+      <h1>{{ title }}</h1>
+      <p></p>
+      {% if story %}
+      <h2></h2>
+      <p>{{ story }}</p>
+      {% else %}
+      <form method="POST" action="{{ request.path }}">
+        <label> የተቋም ስም</label><br />
+        <input type="text" name="ተቋም" value="{{ ተቋም }}" required /><br /><br />
+
+        <label>ቀለም</label><br />
+        <input type="text" name="ቀለም" value="{{ ቀለም }}" required /><br /><br />
+
+        <label>እንሰሳ</label><br />
+        <input
+          type="text"
+          name="እንሰሳ"
+          value="{{ እንሰሳ }}"
+          required
+        /><br /><br />
+
+        <label>የቤት እቃ</label><br />
+        <input
+          type="text"
+          name="የቤት_እቃ"
+          value="{{ የቤት_እቃ }}"
+          required
+        /><br /><br />
+
+        <button type="submit" class="option-btn">ታሪኩን ይመልከቱ</button>
+      </form>
+      {% endif %}
+
+      <br />
+      <a href="/topics" class="option-btn">← ወደ ርዕሶች ይመለሱ</a>
+    </div>
+  </body>
+</html>
